@@ -1,14 +1,18 @@
 //-------------------------------------------------
 // Deployed to: https://job-hunt-ass11.web.app/
 //-------------------------------------------------
+// https://www.wowclub.com/
+// https://www.tourmyindia.com/
 
 import './App.css';
 // import modules
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import { Header } from './components/header/Header';
+import { Features } from './components/features/Features';
+import { Footer } from './components/footer/Footer';
 import { PrivateRoute } from './components/PrivateRoute';
+import { Services } from './components/services/Services';
 
 import { About } from './pages/About';
 import { Auth } from './pages/Auth';
@@ -22,32 +26,37 @@ export const App = () => {
   const appUser = "job-hunt-ass11-user";
   const loggedYes = "LOGGED_IN";
   const loggedNo = "LOGGED_OUT";
-  const roleUser = "user";
-  const roleAdmin = "admin";
-  const roleNone = "none";
-  const setUser = () => {
-    localStorage.setItem(appUser, JSON.stringify({ status: loggedYes, role: roleUser }));
-  }
-  const setAdmin = () => {
-    localStorage.setItem(appUser, JSON.stringify({ status: loggedYes, role: roleAdmin }));
+  const roleAdmin = "ADMIN";
+  const roleNone = "NONE";
+  const getInfo = () => JSON.parse(localStorage.getItem(appUser));
+  const setLogin = () => {
+    const infoObj = { status: loggedYes, role: roleNone };
+    localStorage.setItem(appUser, JSON.stringify(infoObj));
   }
   const setLogout = () => {
-    localStorage.setItem(appUser, JSON.stringify({ status: loggedNo, role: roleNone }));
+    const infoObj = { status: loggedNo, role: roleNone };
+    localStorage.setItem(appUser, JSON.stringify(infoObj));
+  }
+  const setRole = (userRole) => {
+    const infoObj = getInfo();
+    infoObj.role = userRole.toUpperCase();
+    localStorage.setItem(appUser, JSON.stringify(infoObj));
   }
   const isAuthenticated = () => {
-    return JSON.parse(localStorage.getItem(appUser)).status === loggedYes;
+    const infoObj = getInfo();
+    return infoObj.status === loggedYes;
   }
   const isAdmin = () => {
-    if (isAuthenticated() && JSON.parse(localStorage.getItem(appUser)).role === "admin") {
-      return true;
-    }
-    return false;
+    const infoObj = getInfo();
+    return infoObj.role === roleAdmin;
   }
 
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
+        <Services />
+        <Features />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -59,9 +68,9 @@ export const App = () => {
             </PrivateRoute>}
           />
           <Route path="/auth" element={<Auth
-            setUser={setUser}
-            setAdmin={setAdmin}
+            setLogin={setLogin}
             setLogout={setLogout}
+            setRole={setRole}
             isAdmin={isAdmin}
             isAuthenticated={isAuthenticated}
           />} />
@@ -72,3 +81,4 @@ export const App = () => {
   );
 
 }
+// hello there

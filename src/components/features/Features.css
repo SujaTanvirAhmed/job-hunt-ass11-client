@@ -1,0 +1,32 @@
+.feature-sec {
+    background: url("./features-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    padding: 300px 0 50px;
+    /* display: none; */
+}
+.features {
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 50px;
+}
+.feature-title {
+    font-size: 40px;
+    color: purple;
+    margin-bottom: 40px;
+    /* padding-top: 40px; */
+}
+.feature-group {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    padding: 30px;
+}
+.feature svg {
+    height: 70px;
+    width: auto;
+}
+.feature h3 {
+    margin: 20px 0;
+}

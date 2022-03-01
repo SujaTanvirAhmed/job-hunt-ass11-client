@@ -1,0 +1,19 @@
+.services {
+    background-color: darkseagreen;
+    padding: 100px 0 50px;
+}
+.service-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.service {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px #555;
+}
+.service img {
+    width: 100%;
+    height: auto;
+}

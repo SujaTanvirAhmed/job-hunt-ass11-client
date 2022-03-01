@@ -1,0 +1,26 @@
+footer {
+    background: url(footer-image2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: none; */
+}
+.footer-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.footer-header {
+    text-align: left;
+}
+footer ul {
+    list-style: none;
+}
+footer ul li {
+    text-align: left;
+}
+footer a {
+    text-decoration: none;
+}
+footer .socio-links,
+footer .socio-links ul li {
+    text-align: right;
+}
