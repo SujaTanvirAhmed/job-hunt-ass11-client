@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { Banner } from '../components/banner/Banner';
+import { Features } from "../components/features/Features";
+import { Services } from "../components/services/Services";
 // import axios from 'axios';
 
 export const Home = () => {
@@ -27,16 +30,9 @@ export const Home = () => {
     // }
     return (
         <div>
-            {/* <h1>Hello there!</h1>
-            <p>{error}</p>
-            <ul>
-                {users.map(user => <li key={user.id}>{user.name}</li>)}
-            </ul>
-            <button onClick={handleGetUsers}>Get Users</button>
-            <br />
-            <input type="text" ref={nameRef} placeholder="Your name" />
-            <input type="email" ref={emailRef} placeholder="Your email" />
-            <button onClick={handlePost}>Post a request</button> */}
+            <Banner />
+            <Services />
+            <Features />
         </div>
     );
 }

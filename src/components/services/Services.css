@@ -1,6 +1,12 @@
 .services {
-    background-color: darkseagreen;
+    background: url("https://i.ibb.co/C2nKPZX/services-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 100px 0 50px;
+}
+.services .feature-title {
+    margin: -40px 0 60px;
 }
 .service-group {
     display: grid;
@@ -15,5 +21,8 @@
 }
 .service img {
     width: 100%;
-    height: auto;
+    height: 250px;
+}
+.service h3 {
+    margin: 15px 20px;
 }

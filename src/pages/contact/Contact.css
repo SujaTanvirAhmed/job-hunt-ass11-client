@@ -1,0 +1,76 @@
+.contact {
+    background: url("https://i.ibb.co/zP3NQQx/contact-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    /* margin-top: 150px; */
+}
+.contact .container {
+    height: 100%;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-group {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.form-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.contact-group form,
+.contact-group .other-option {
+    width: 350px;
+}
+.contact-group form {
+    height: 400px;
+    /* width: 350px; */
+    padding: 20px;
+    background-color: rgb(29, 144, 179);
+    border-radius: 10px;
+}
+.contact-input {
+    width: 250px;
+    line-height: 20px;
+    margin-top: 15px;
+    background-color: rgb(193, 228, 241);
+    padding: 7px 12px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 15px;
+    border: 0;
+}
+.contact-group .contact-query {
+    color: #ccc;
+}
+.contact-group .btn {
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 10px 40px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+}
+.contact-group .btn:hover {
+    box-shadow: -3px 3px 5px #000;
+}
+.contact-group .log-btn {
+    background-color: transparent;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.contact-group .reg-btn {
+    border: 2px solid #ccc;
+    background-color: transparent;
+    color: #fff;
+}

@@ -9,14 +9,14 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { Header } from './components/header/Header';
-import { Features } from './components/features/Features';
+// import { Features } from './components/features/Features';
 import { Footer } from './components/footer/Footer';
 import { PrivateRoute } from './components/PrivateRoute';
-import { Services } from './components/services/Services';
+// import { Services } from './components/services/Services';
 
 import { About } from './pages/About';
 import { Auth } from './pages/Auth';
-import { Contact } from './pages/Contact';
+import { Contact } from './pages/contact/Contact';
 import { Dashboard } from './pages/Dashboard';
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
@@ -55,8 +55,8 @@ export const App = () => {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Services />
-        <Features />
+        {/* <Services />
+        <Features /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -81,4 +81,3 @@ export const App = () => {
   );
 
 }
-// hello there

@@ -1,19 +1,13 @@
-// import { initializeApp } from "firebase/app";
-// import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import { initializeApp } from "firebase/app";
 
-// const firebaseConfig = {
-//     apiKey: process.env.REACT_APP_apiKey,
-//     authDomain: process.env.REACT_APP_authDomain,
-//     projectId: process.env.REACT_APP_projectId,
-//     storageBucket: process.env.REACT_APP_storageBucket,
-//     messagingSenderId: process.env.REACT_APP_messagingSenderId,
-//     appId: process.env.REACT_APP_appId
-// };
+const firebaseConfig = {
+    apiKey: "AIzaSyD0i_fJM1Vc37n_S1CF4gM6GwiLlK9H_W4",
+    authDomain: "job-hunt-ass11.firebaseapp.com",
+    projectId: "job-hunt-ass11",
+    storageBucket: "job-hunt-ass11.appspot.com",
+    messagingSenderId: "342956881483",
+    appId: "1:342956881483:web:3f51fde9df12ac223b7fce"
+};
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-//const auth = getAuth(app);
-// const provider = new GoogleAuthProvider();
-
-// export const signInWithGoogle = () => signInWithPopup(auth, provider);
-// export const signOutFirebase = () => signOut(auth);
+// Initialize Firebase
+export const app = initializeApp(firebaseConfig);
