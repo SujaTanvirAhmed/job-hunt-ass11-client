@@ -33,8 +33,8 @@ export const Footer = () => {
                     <div>
                         <h3 className="footer-header">Contact us</h3>
                         <ul>
-                            <li><Link to="#">+91-9871921623</Link></li>
-                            <li><Link to="#">hello@wowclub.in</Link></li>
+                            <li><Link to="#">+88-01785254393</Link></li>
+                            <li><Link to="#">hello@tourclub.bd</Link></li>
                         </ul>
                     </div>
                 </div>
