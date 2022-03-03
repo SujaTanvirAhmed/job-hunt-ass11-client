@@ -14,11 +14,12 @@ import { Footer } from './components/footer/Footer';
 import { PrivateRoute } from './components/PrivateRoute';
 // import { Services } from './components/services/Services';
 
-import { About } from './pages/About';
+import { About } from './pages/about/About';
 import { Auth } from './pages/Auth';
 import { Contact } from './pages/contact/Contact';
 import { Dashboard } from './pages/Dashboard';
 import { Home } from './pages/Home';
+import { Order } from './pages/order/Order';
 import { Profile } from './pages/Profile';
 
 export const App = () => {
@@ -61,6 +62,7 @@ export const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/order" element={<Order />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/dashboard" element={
             <PrivateRoute>
