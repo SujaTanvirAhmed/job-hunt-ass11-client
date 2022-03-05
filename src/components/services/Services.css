@@ -26,7 +26,18 @@
 .service h3 {
     margin: 15px 20px;
 }
-.service a {
+/* .service a {
     text-decoration: underline;
     text-shadow: 2px 2px 4px green;
+} */
+.service button {
+    background: transparent;
+    border: 0;
+    text-shadow: 3px 3px 3px black, 
+    0px -3px 3px black, 
+    -3px 0 3px black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 25px;
 }

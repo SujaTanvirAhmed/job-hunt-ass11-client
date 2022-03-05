@@ -1,7 +1,30 @@
+import * as React from "react";
 import { Link } from 'react-router-dom';
+import { logOut } from "../../firebase-auth/FirebaseAuth";
 import "./Header.css";
 
-export const Header = () => {
+export const Header = ({ userEmail, setUserEmail }) => {
+
+    // const [userEmail, setUserEmail] = React.useState("");
+
+    // React.useEffect(() => {
+    //     firebaseAuthState((user) => {
+    //         if (user) {
+    //             setUserEmail(user.email);
+    //         }
+    //     });
+    // }, []);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                setUserEmail("");
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    }
+
     return (
         <header>
             <div className="container">
@@ -13,17 +36,18 @@ export const Header = () => {
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/about">About</Link></li>
-                            <li><Link to="/profile">Manage Orders</Link></li>
-                            <li><Link to="/dashboard">Manage All Orders</Link></li>
-                            <li><Link to="/auth">Authentication</Link></li>
+                            <li><Link to="/manage-orders">Manage Orders</Link></li>
+                            <li><Link to="/manage-all-orders">Manage All Orders</Link></li>
                         </ul>
                     </nav>
                     <ul className="login">
-                        <li><Link to="/contact" className="nav-login-btn">Login</Link></li>
+                        {userEmail === "" ? <li><Link to="/contact" className="nav-login-btn">Login</Link></li> : null}
+
+                        {userEmail !== "" ? <button className="nav-logout-btn" onClick={handleLogOut}>Logout</button> : null}
                     </ul>
+                    {userEmail !== "" ? <p className="user-info">Logged in as <span>{userEmail}</span></p> : null}
                 </div>
             </div>
-            {/* <div className="header-bg"></div> */}
         </header>
     );
 }

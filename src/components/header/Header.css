@@ -65,7 +65,8 @@ nav a:hover {
 .login {
     margin-left: auto;
 }
-.nav-login-btn {
+.nav-login-btn,
+.nav-logout-btn {
     background-color: #002f69;
     color: #fff;
     padding: 8px 20px;
@@ -73,6 +74,18 @@ nav a:hover {
     border-radius: 20px;
     transition: ease-in 0.3s;
 }
-.nav-login-btn:hover {
+.nav-login-btn:hover,
+.nav-logout-btn:hover {
     box-shadow: -3px 3px 5px maroon;
+}
+.user-info {
+    position: absolute;
+    right: 0;
+    bottom: 14px;
+    font-size: 13px;
+    font-family: tahoma;
+}
+.user-info span {
+    font-style: italic;
+    font-weight: bold;
 }
